@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Fasteners - Choose Your Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .main-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .option-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .option-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .option-card:hover::before {
+            opacity: 1;
+        }
+
+        .option-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .option-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: #ffd700;
+            transition: transform 0.3s ease;
+        }
+
+        .option-card:hover .option-icon {
+            transform: scale(1.1);
+        }
+
+        .option-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .option-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .features-list {
+            text-align: left;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .feature-icon {
+            color: #ffd700;
+            margin-right: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: 2px solid white;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .floating-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .options-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .option-card {
+                padding: 2rem;
+            }
+
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.2);
+            color: #ffd700;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Particles Background -->
+    <div class="floating-particles" id="particles"></div>
+
+    <div class="container">
+        <h1 class="main-title">Custom Fasteners</h1>
+        <p class="subtitle">Choose your preferred website experience</p>
+
+        <div class="options-grid">
+            <!-- Business Website Option -->
+            <div class="option-card" onclick="window.location.href='custom-fasteners-website.html'">
+                <div class="badge">PROFESSIONAL BUSINESS</div>
+                <i class="material-icons option-icon">business</i>
+                <h2 class="option-title">Business Website</h2>
+                <p class="option-description">
+                    Professional corporate website with clean design and comprehensive business information
+                </p>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <i class="material-icons feature-icon">check_circle</i>
+                        <span>Clean & Professional Design</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="material-icons feature-icon">check_circle</i>
+                        <span>Full Company Information</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="material-icons feature-icon">check_circle</i>
+                        <span>Client Testimonials</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="material-icons feature-icon">check_circle</i>
+                        <span>Contact & Inquiry Forms</span>
+                    </div>
+                </div>
+                <a href="custom-fasteners-website.html" class="cta-button">Visit Business Site</a>
+            </div>
+
+            <!-- Poster Website Option -->
+            <div class="option-card" onclick="window.location.href='precision-fasteners-poster.html'">
+                <div class="badge">HIGH-IMPACT VISUAL</div>
+                <i class="material-icons option-icon">visibility</i>
+                <h2 class="option-title">Visual Poster</h2>
+                <p class="option-description">
+                    Stunning visual experience with animated backgrounds and modern tech aesthetics
+                </p>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <i class="material-icons feature-icon">check_circle</i>
+                        <span>Animated Backgrounds</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="material-icons feature-icon">check_circle</i>
+                        <span>Modern Tech Design</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="material-icons feature-icon">check_circle</i>
+                        <span>Interactive Elements</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="material-icons feature-icon">check_circle</i>
+                        <span>High Visual Impact</span>
+                    </div>
+                </div>
+                <a href="precision-fasteners-poster.html" class="cta-button">Visit Visual Site</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Initialize particles on load
+        createParticles();
+
+        // Add hover sound effect (optional)
+        document.querySelectorAll('.option-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                // Add any sound effect here if desired
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add page loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 1s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
