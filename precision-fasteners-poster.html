@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Fasteners | Engineering Tomorrow's Connections</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .poster-container {
+            width: 1280px;
+            min-height: 960px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Background Effects */
+        .bg-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #000000 0%, #0a1929 100%);
+            z-index: -2;
+        }
+
+        .bg-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: -1;
+        }
+
+        .bg-accent {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 136, 255, 0.1) 0%, rgba(0, 136, 255, 0) 70%);
+            z-index: -1;
+        }
+
+        .accent-1 {
+            top: -150px;
+            right: -150px;
+        }
+
+        .accent-2 {
+            bottom: 200px;
+            left: -200px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            text-shadow: 0 0 10px rgba(0, 136, 255, 0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #0088ff;
+            text-shadow: 0 0 8px rgba(0, 136, 255, 0.7);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            border-radius: 16px;
+            min-height: 500px;
+            overflow: hidden;
+        }
+
+        /* CNC Machine Background Animation - Only for Hero */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://sfile.chatglm.cn/images-ppt/165d7c59282b.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.6;
+            z-index: -1;
+            animation: cncMove 20s linear infinite;
+        }
+
+        @keyframes cncMove {
+            0% {
+                transform: scale(1.1) translate(0, 0);
+            }
+            25% {
+                transform: scale(1.2) translate(-2%, -1%);
+            }
+            50% {
+                transform: scale(1.1) translate(1%, -2%);
+            }
+            75% {
+                transform: scale(1.2) translate(-1%, 1%);
+            }
+            100% {
+                transform: scale(1.1) translate(0, 0);
+            }
+        }
+
+        .hero-title {
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+            animation: fadeInDown 1s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            font-weight: 300;
+            max-width: 80%;
+            margin-bottom: 40px;
+            color: #cccccc;
+            animation: fadeInUp 1s ease-out 0.3s both;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-button {
+            background: #0088ff;
+            color: #ffffff;
+            border: none;
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: pulse 2s infinite;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 136, 255, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 136, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 136, 255, 0);
+            }
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 136, 255, 0.3);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Sections */
+        .section {
+            padding: 60px;
+            margin-bottom: 40px;
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .section-title {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #ffffff;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Capabilities Section */
+        .capabilities {
+            background: rgba(10, 25, 41, 0.8);
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        .capabilities::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://sfile.chatglm.cn/images-ppt/45795ec317cb.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.15;
+            z-index: 0;
+            animation: bgMove 30s linear infinite;
+        }
+
+        @keyframes bgMove {
+            0% {
+                transform: scale(1.05) translate(0, 0);
+            }
+            50% {
+                transform: scale(1.1) translate(-1%, -1%);
+            }
+            100% {
+                transform: scale(1.05) translate(0, 0);
+            }
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .capability-card {
+            background: rgba(10, 25, 41, 0.8);
+            border-radius: 8px;
+            padding: 40px;
+            border: 1px solid rgba(0, 136, 255, 0.2);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .capability-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 136, 255, 0.1) 0%, rgba(0, 136, 255, 0) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .capability-card:hover::before {
+            opacity: 1;
+        }
+
+        .capability-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 136, 255, 0.5);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .capability-icon {
+            font-size: 40px;
+            color: #0088ff;
+            margin-right: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .capability-card:hover .capability-icon {
+            transform: scale(1.1);
+        }
+
+        .capability-content {
+            flex: 1;
+        }
+
+        .capability-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .capability-description {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #cccccc;
+        }
+
+        /* Products Section */
+        .products {
+            background: rgba(10, 25, 41, 0.8);
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .products::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://sfile.chatglm.cn/images-ppt/a6033f20647a.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.15;
+            z-index: 0;
+            animation: bgMove 25s linear infinite reverse;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .product-card {
+            background: rgba(10, 25, 41, 0.8);
+            border-radius: 8px;
+            padding: 30px;
+            border: 1px solid rgba(0, 136, 255, 0.2);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 136, 255, 0.1) 0%, rgba(0, 136, 255, 0) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-card:hover::before {
+            opacity: 1;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 136, 255, 0.5);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-icon {
+            font-size: 36px;
+            color: #0088ff;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-icon {
+            transform: scale(1.1);
+        }
+
+        .product-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .product-description {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #cccccc;
+            flex-grow: 1;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 120px;
+            background-color: #111;
+            border-radius: 8px;
+            margin-top: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        /* Industries Section */
+        .industries {
+            background: rgba(10, 25, 41, 0.8);
+            animation: fadeIn 1s ease-out 0.9s both;
+        }
+
+        .industries::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://sfile.chatglm.cn/images-ppt/ec5ef8609254.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.15;
+            z-index: 0;
+            animation: bgMove 35s linear infinite;
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .industry-card {
+            background: rgba(10, 25, 41, 0.8);
+            border-radius: 8px;
+            padding: 30px;
+            border: 1px solid rgba(0, 136, 255, 0.2);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .industry-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 136, 255, 0.1) 0%, rgba(0, 136, 255, 0) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .industry-card:hover::before {
+            opacity: 1;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 136, 255, 0.5);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .industry-icon {
+            font-size: 36px;
+            color: #0088ff;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .industry-card:hover .industry-icon {
+            transform: scale(1.1);
+        }
+
+        .industry-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .industry-image {
+            width: 100%;
+            height: 120px;
+            background-color: #111;
+            border-radius: 8px;
+            margin-top: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .industry-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 5s ease;
+        }
+
+        .industry-card:hover .industry-image img {
+            transform: scale(1.05);
+        }
+
+        /* Equipment Section */
+        .equipment {
+            background: rgba(10, 25, 41, 0.8);
+            animation: fadeIn 1s ease-out 1.2s both;
+        }
+
+        .equipment::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://sfile.chatglm.cn/images-ppt/8d0845cce71a.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.15;
+            z-index: 0;
+            animation: bgMove 20s linear infinite reverse;
+        }
+
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .equipment-card {
+            background: rgba(10, 25, 41, 0.8);
+            border-radius: 8px;
+            padding: 0;
+            border: 1px solid rgba(0, 136, 255, 0.2);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .equipment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 136, 255, 0.1) 0%, rgba(0, 136, 255, 0) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .equipment-card:hover::before {
+            opacity: 1;
+        }
+
+        .equipment-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 136, 255, 0.5);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .equipment-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .equipment-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 5s ease;
+        }
+
+        .equipment-card:hover .equipment-image img {
+            transform: scale(1.05);
+        }
+
+        .equipment-content {
+            padding: 30px;
+        }
+
+        .equipment-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .equipment-description {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #cccccc;
+        }
+
+        /* Certifications Section */
+        .certifications {
+            background: rgba(10, 25, 41, 0.8);
+            animation: fadeIn 1s ease-out 1.5s both;
+        }
+
+        .certifications::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://sfile.chatglm.cn/images-ppt/874042b31df8.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.15;
+            z-index: 0;
+            animation: bgMove 40s linear infinite reverse;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .certification-card {
+            background: rgba(10, 25, 41, 0.8);
+            border-radius: 8px;
+            padding: 30px;
+            border: 1px solid rgba(0, 136, 255, 0.2);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .certification-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 136, 255, 0.1) 0%, rgba(0, 136, 255, 0) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .certification-card:hover::before {
+            opacity: 1;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 136, 255, 0.5);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .certification-icon {
+            font-size: 40px;
+            color: #0088ff;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .certification-card:hover .certification-icon {
+            transform: scale(1.1);
+        }
+
+        .certification-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .certification-description {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #cccccc;
+        }
+
+        .certification-image {
+            width: 100%;
+            height: 120px;
+            background-color: #111;
+            border-radius: 8px;
+            margin-top: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .certification-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 5s ease;
+        }
+
+        .certification-card:hover .certification-image img {
+            transform: scale(1.05);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: rgba(10, 25, 41, 0.8);
+            border-radius: 8px;
+            padding: 60px;
+            border: 1px solid rgba(0, 136, 255, 0.2);
+            animation: fadeIn 1s ease-out 1.8s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://sfile.chatglm.cn/images-ppt/e54462ef9372.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.1;
+            z-index: 0;
+            animation: bgMove 30s linear infinite reverse;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-card {
+            padding: 30px;
+            border-left: 3px solid #0088ff;
+            transition: transform 0.3s ease;
+            position: relative;
+            background: rgba(10, 25, 41, 0.6);
+            border-radius: 8px;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-text {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #cccccc;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .testimonial-company {
+            font-size: 16px;
+            color: #0088ff;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #111;
+            margin-bottom: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Process Section */
+        .process {
+            background: rgba(10, 25, 41, 0.8);
+            animation: fadeIn 1s ease-out 2.1s both;
+        }
+
+        .process::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://sfile.chatglm.cn/images-ppt/74a20852d3a8.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.15;
+            z-index: 0;
+            animation: bgMove 25s linear infinite;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-step {
+            background: rgba(10, 25, 41, 0.8);
+            border-radius: 8px;
+            padding: 30px;
+            border: 1px solid rgba(0, 136, 255, 0.2);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .process-step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 136, 255, 0.1) 0%, rgba(0, 136, 255, 0) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .process-step:hover::before {
+            opacity: 1;
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 136, 255, 0.5);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .step-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: #0088ff;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .process-step:hover .step-number {
+            transform: scale(1.1);
+        }
+
+        .step-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .step-description {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #cccccc;
+        }
+
+        .step-image {
+            width: 100%;
+            height: 120px;
+            background-color: #111;
+            border-radius: 8px;
+            margin-top: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .step-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 5s ease;
+        }
+
+        .process-step:hover .step-image img {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            padding: 80px 60px;
+            animation: fadeIn 1s ease-out 2.4s both;
+            position: relative;
+            overflow: hidden;
+            background: rgba(10, 25, 41, 0.8);
+            border-radius: 16px;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://sfile.chatglm.cn/images-ppt/42b031b5e25d.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.15;
+            z-index: 0;
+            animation: bgMove 20s linear infinite reverse;
+        }
+
+        .contact-title {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-description {
+            font-size: 20px;
+            line-height: 1.5;
+            color: #cccccc;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 60px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: auto;
+            animation: fadeIn 1s ease-out 2.7s both;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: #cccccc;
+            font-size: 24px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #0088ff;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            font-size: 14px;
+            color: #888888;
+        }
+
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000000;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .cnc-loader {
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+
+        .cnc-loader::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 3px solid rgba(0, 136, 255, 0.3);
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+        }
+
+        .cnc-loader::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 3px solid transparent;
+            border-top-color: #0088ff;
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite reverse;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="cnc-loader"></div>
+    </div>
+
+    <div class="poster-container">
+        <!-- Background -->
+        <div class="bg-gradient"></div>
+        <div class="bg-grid"></div>
+        <div class="bg-accent accent-1"></div>
+        <div class="bg-accent accent-2"></div>
+
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">PRECISION FASTENERS</div>
+            <div class="nav-links">
+                <a href="#">Capabilities</a>
+                <a href="#">Products</a>
+                <a href="#">Solutions</a>
+                <a href="#">Technology</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero-title">Industry Leader Since 1994</h1>
+            <p class="hero-subtitle">China's Premier Custom Fasteners Manufacturer</p>
+            <a href="#" class="cta-button">EXPLORE OUR CAPABILITIES</a>
+        </section>
+
+        <!-- Capabilities Section -->
+        <section class="section capabilities">
+            <h2 class="section-title">Our Core Capabilities</h2>
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <i class="material-icons capability-icon">precision_manufacturing</i>
+                    <div class="capability-content">
+                        <h3 class="capability-title">5-Axis Precision Turning</h3>
+                        <p class="capability-description">State-of-the-art 5-axis precision turning centers with ±0.03mm tolerance for complex geometries</p>
+                    </div>
+                </div>
+                <div class="capability-card">
+                    <i class="material-icons capability-icon">construction</i>
+                    <div class="capability-content">
+                        <h3 class="capability-title">Multi-Stage Cold Forging</h3>
+                        <p class="capability-description">Advanced multi-stage cold forging presses for complex geometries and high-volume production</p>
+                    </div>
+                </div>
+                <div class="capability-card">
+                    <i class="material-icons capability-icon">science</i>
+                    <div class="capability-content">
+                        <h3 class="capability-title">Material Analysis</h3>
+                        <p class="capability-description">Advanced material analysis and quality verification systems for multi-material capability</p>
+                    </div>
+                </div>
+                <div class="capability-card">
+                    <i class="material-icons capability-icon">auto_fix_high</i>
+                    <div class="capability-content">
+                        <h3 class="capability-title">Automated Treatment</h3>
+                        <p class="capability-description">Fully automated coating and treatment lines for consistent surface finishes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="section products">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <i class="material-icons product-icon">electric_car</i>
+                    <h3 class="product-title">Battery Module Fasteners</h3>
+                    <p class="product-description">High-strength corrosion-resistant fasteners for electric vehicle battery systems</p>
+                    <div class="product-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/2d7bbf3c6c9c.jpg" alt="Battery Module Fasteners">
+                    </div>
+                </div>
+                <div class="product-card">
+                    <i class="material-icons product-icon">smart_toy</i>
+                    <h3 class="product-title">Robotic Components</h3>
+                    <p class="product-description">Precision-machined components for robotic arm assemblies and automation systems</p>
+                    <div class="product-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/25f452e0bc8e.jpg" alt="Robotic Components">
+                    </div>
+                </div>
+                <div class="product-card">
+                    <i class="material-icons product-icon">dns</i>
+                    <h3 class="product-title">Server Infrastructure</h3>
+                    <p class="product-description">Custom mounting solutions for data center servers and networking equipment</p>
+                    <div class="product-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/15c6b538a748.jpg" alt="Server Infrastructure">
+                    </div>
+                </div>
+                <div class="product-card">
+                    <i class="material-icons product-icon">precision_manufacturing</i>
+                    <h3 class="product-title">Heavy Machinery</h3>
+                    <p class="product-description">Industrial-grade fasteners for heavy machinery and construction equipment</p>
+                    <div class="product-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/25a501dbbed1.jpg" alt="Heavy Machinery">
+                    </div>
+                </div>
+                <div class="product-card">
+                    <i class="material-icons product-icon">directions_bus</i>
+                    <h3 class="product-title">Commercial Vehicles</h3>
+                    <p class="product-description">Specialized fasteners for commercial vehicles and transportation systems</p>
+                    <div class="product-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/158852c5da06.jpg" alt="Commercial Vehicles">
+                    </div>
+                </div>
+                <div class="product-card">
+                    <i class="material-icons product-icon">settings</i>
+                    <h3 class="product-title">Industrial Machinery</h3>
+                    <p class="product-description">Custom components for industrial machinery and manufacturing equipment</p>
+                    <div class="product-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/24ec2377c491.jpg" alt="Industrial Machinery">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries Section -->
+        <section class="section industries">
+            <h2 class="section-title">Solutions for Key Industries</h2>
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <i class="material-icons industry-icon">electric_car</i>
+                    <h3 class="industry-name">Electric Vehicles</h3>
+                    <div class="industry-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/165d7c59282b.jpg" alt="Electric Vehicles">
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <i class="material-icons industry-icon">precision_manufacturing</i>
+                    <h3 class="industry-name">Robotics</h3>
+                    <div class="industry-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/45795ec317cb.jpg" alt="Robotics">
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <i class="material-icons industry-icon">dns</i>
+                    <h3 class="industry-name">Data Centers</h3>
+                    <div class="industry-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/a6033f20647a.jpg" alt="Data Centers">
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <i class="material-icons industry-icon">construction</i>
+                    <h3 class="industry-name">Heavy Machinery</h3>
+                    <div class="industry-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/8d0845cce71a.jpg" alt="Heavy Machinery">
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <i class="material-icons industry-icon">directions_bus</i>
+                    <h3 class="industry-name">Transportation</h3>
+                    <div class="industry-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/874042b31df8.jpg" alt="Transportation">
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <i class="material-icons industry-icon">factory</i>
+                    <h3 class="industry-name">Manufacturing</h3>
+                    <div class="industry-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/e54462ef9372.jpg" alt="Manufacturing">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipment Section -->
+        <section class="section equipment">
+            <h2 class="section-title">State-of-the-Art Equipment & Technology</h2>
+            <div class="equipment-grid">
+                <div class="equipment-card">
+                    <div class="equipment-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/2b8fbc31c4cb.jpg" alt="5-Axis CNC Machining Center">
+                    </div>
+                    <div class="equipment-content">
+                        <h3 class="equipment-title">5-Axis CNC Machining Center</h3>
+                        <p class="equipment-description">State-of-the-art 5-axis CNC machining center for precision manufacturing with ±0.03mm tolerance</p>
+                    </div>
+                </div>
+                <div class="equipment-card">
+                    <div class="equipment-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/13dc970f7dd5.jpg" alt="Precision CNC Manufacturing">
+                    </div>
+                    <div class="equipment-content">
+                        <h3 class="equipment-title">Precision CNC Manufacturing</h3>
+                        <p class="equipment-description">High-precision CNC machining of custom fastener components with automated quality control</p>
+                    </div>
+                </div>
+                <div class="equipment-card">
+                    <div class="equipment-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/74a20852d3a8.jpg" alt="Modern Manufacturing Facility">
+                    </div>
+                    <div class="equipment-content">
+                        <h3 class="equipment-title">Modern Manufacturing Facility</h3>
+                        <p class="equipment-description">Our state-of-the-art manufacturing facility with automated production lines and robotics</p>
+                    </div>
+                </div>
+                <div class="equipment-card">
+                    <div class="equipment-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/ec5ef8609254.jpg" alt="Quality Control Laboratory">
+                    </div>
+                    <div class="equipment-content">
+                        <h3 class="equipment-title">Quality Control Laboratory</h3>
+                        <p class="equipment-description">Advanced quality control laboratory with precision testing equipment and material analysis</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="section certifications">
+            <h2 class="section-title">Certifications & Quality Assurance</h2>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <i class="material-icons certification-icon">verified</i>
+                    <h3 class="certification-title">ISO 9001:2015</h3>
+                    <p class="certification-description">Quality Management Systems certification ensuring consistent quality and customer satisfaction</p>
+                    <div class="certification-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/42b031b5e25d.jpg" alt="ISO 9001:2015">
+                    </div>
+                </div>
+                <div class="certification-card">
+                    <i class="material-icons certification-icon">verified</i>
+                    <h3 class="certification-title">IATF 16949:2016</h3>
+                    <p class="certification-description">Automotive Quality Management certification for the automotive industry supply chain</p>
+                    <div class="certification-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/6345195eafe2.jpg" alt="IATF 16949:2016">
+                    </div>
+                </div>
+                <div class="certification-card">
+                    <i class="material-icons certification-icon">verified</i>
+                    <h3 class="certification-title">Export License</h3>
+                    <p class="certification-description">Global Trade Compliance certification for international export and distribution</p>
+                    <div class="certification-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/4d7b42564ebb.jpg" alt="Export License">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section testimonials">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="https://sfile.chatglm.cn/images-ppt/d69704f58888.jpg" alt="Client Avatar">
+                    </div>
+                    <p class="testimonial-text">"Exceptional precision and reliability. Their custom fasteners have become critical components in our battery systems."</p>
+                    <p class="testimonial-author">Leading EV Manufacturer</p>
+                    <p class="testimonial-company">Germany</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="https://sfile.chatglm.cn/images-ppt/cb27dbe5cb24.jpg" alt="Client Avatar">
+                    </div>
+                    <p class="testimonial-text">"The quality and consistency of their precision-machined components exceed our expectations every time."</p>
+                    <p class="testimonial-author">Robotics Innovator</p>
+                    <p class="testimonial-company">Japan</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="https://sfile.chatglm.cn/images-ppt/41c7ff2de3c4.jpg" alt="Client Avatar">
+                    </div>
+                    <p class="testimonial-text">"Reliable partner for our custom mounting solutions. Fast delivery and outstanding quality control."</p>
+                    <p class="testimonial-author">Data Center Solutions</p>
+                    <p class="testimonial-company">USA</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="section process">
+            <h2 class="section-title">Our Custom Process in 4 Steps</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Submit Your Drawing</h3>
+                    <p class="step-description">Upload your technical specifications and requirements</p>
+                    <div class="step-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/332f0f436090.jpg" alt="Submit Your Drawing">
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Engineering Review</h3>
+                    <p class="step-description">Our experts analyze and optimize your design</p>
+                    <div class="step-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/bb15a1d1f8c4.jpg" alt="Engineering Review">
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Prototype & Approval</h3>
+                    <p class="step-description">Sample production and quality verification</p>
+                    <div class="step-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/72947e65422d.jpg" alt="Prototype & Approval">
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Mass Production & Shipping</h3>
+                    <p class="step-description">Full-scale production with global delivery</p>
+                    <div class="step-image">
+                        <img src="https://sfile.chatglm.cn/images-ppt/9829b459cad3.jpg" alt="Mass Production & Shipping">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <h2 class="contact-title">Let's Build Your Custom Fasteners Project Together</h2>
+            <p class="contact-description">Join 100+ global companies who trust us for precision custom fasteners</p>
+            <a href="#" class="cta-button">CONTACT US</a>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">PRECISION FASTENERS</div>
+                <div class="social-links">
+                    <a href="#"><i class="material-icons">language</i></a>
+                    <a href="#"><i class="material-icons">email</i></a>
+                    <a href="#"><i class="material-icons">phone</i></a>
+                </div>
+                <div class="copyright">© 2025 Precision Fasteners. All rights reserved.</div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Loading animation
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loadingOverlay').classList.add('hidden');
+            }, 1500);
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
