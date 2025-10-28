@@ -1,0 +1,2129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Fasteners | Engineering Tomorrow's Connections</title>
+    <meta name="description" content="Precision custom fasteners manufacturer since 1994. Specializing in CNC machining, cold forging, and surface treatment. ISO 9001 & IATF 16949 certified. Global export to 100+ countries.">
+    <meta name="keywords" content="custom fasteners, CNC machining, precision manufacturing, industrial fasteners, automotive components, EV battery fasteners, robotics parts">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0066CC;
+            --accent-color: #00ADEF;
+            --background-color: #FFFFFF;
+            --text-color: #212121;
+            --secondary-color: #A8A8A8;
+            --gradient-primary: linear-gradient(135deg, #0066CC 0%, #00ADEF 100%);
+            --gradient-secondary: linear-gradient(135deg, #00ADEF 0%, #0066CC 100%);
+            --gradient-light: linear-gradient(135deg, rgba(0, 102, 204, 0.1) 0%, rgba(0, 173, 239, 0.1) 100%);
+            --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --shadow-heavy: 0 12px 32px rgba(0, 0, 0, 0.16);
+            --border-radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .poster-container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 60px;
+            position: relative;
+            z-index: 100;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .quote-btn {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .quote-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            min-height: 700px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f5f9ff 0%, #e6f2ff 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop') no-repeat center center;
+            background-size: cover;
+            opacity: 0.15;
+            z-index: 0;
+            animation: heroBgMove 30s linear infinite;
+        }
+
+        @keyframes heroBgMove {
+            0% { transform: scale(1.05) translate(0, 0); }
+            50% { transform: scale(1.1) translate(-1%, -1%); }
+            100% { transform: scale(1.05) translate(0, 0); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .hero-title {
+            font-size: 72px;
+            font-weight: 900;
+            margin-bottom: 24px;
+            line-height: 1.1;
+            color: var(--text-color);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 48px;
+            color: var(--secondary-color);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin: 60px 0;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .feature-item {
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-number {
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .feature-label {
+            font-size: 20px;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            animation: fadeInUp 1s ease-out 0.9s both;
+        }
+
+        .cta-button {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 18px 48px;
+            font-size: 20px;
+            font-weight: 500;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .cta-button-outline {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .cta-button-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Sections */
+        .section {
+            padding: 100px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: var(--text-color);
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 22px;
+            color: var(--secondary-color);
+            margin-bottom: 80px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Capabilities Section */
+        .capabilities {
+            background: linear-gradient(135deg, #f5f9ff 0%, #ffffff 100%);
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 48px;
+        }
+
+        .capability-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 48px;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .capability-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-light);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+
+        .capability-card:hover::before {
+            opacity: 1;
+        }
+
+        .capability-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .capability-icon {
+            font-size: 56px;
+            color: var(--primary-color);
+            margin-right: 32px;
+            transition: var(--transition);
+            position: relative;
+            z-index: 1;
+        }
+
+        .capability-card:hover .capability-icon {
+            transform: scale(1.1);
+        }
+
+        .capability-content {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .capability-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-color);
+        }
+
+        .capability-description {
+            font-size: 20px;
+            line-height: 1.6;
+            color: var(--secondary-color);
+        }
+
+        /* Featured Products Section */
+        .featured-products {
+            background: linear-gradient(135deg, #ffffff 0%, #f5f9ff 100%);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 8s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-content {
+            padding: 32px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-color);
+        }
+
+        .product-description {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--secondary-color);
+            margin-bottom: 24px;
+        }
+
+        .product-specs {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .spec-tag {
+            background: var(--gradient-light);
+            color: var(--primary-color);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: auto;
+        }
+
+        .product-btn {
+            flex: 1;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .product-btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .product-btn-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .product-btn-outline {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .product-btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Industries Section */
+        .industries {
+            background: linear-gradient(135deg, #f5f9ff 0%, #ffffff 100%);
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .industry-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .industry-header {
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .industry-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 8s ease;
+        }
+
+        .industry-card:hover .industry-image {
+            transform: scale(1.05);
+        }
+
+        .industry-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.8), rgba(0, 173, 239, 0.6));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        .industry-card:hover .industry-overlay {
+            opacity: 0.7;
+        }
+
+        .industry-icon {
+            font-size: 64px;
+            color: white;
+        }
+
+        .industry-content {
+            padding: 32px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .industry-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 16px;
+        }
+
+        .industry-description {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--secondary-color);
+            margin-bottom: 24px;
+        }
+
+        .industry-solutions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .solution-tag {
+            background: var(--gradient-light);
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .industry-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            margin-top: auto;
+        }
+
+        .industry-link:hover {
+            gap: 12px;
+        }
+
+        /* Equipment Section */
+        .equipment {
+            background: linear-gradient(135deg, #ffffff 0%, #f5f9ff 100%);
+        }
+
+        .equipment-carousel {
+            position: relative;
+            overflow: hidden;
+            margin: 60px 0;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .equipment-card {
+            min-width: 420px;
+            margin: 0 24px;
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+        }
+
+        .equipment-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .equipment-image {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .equipment-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 8s ease;
+        }
+
+        .equipment-card:hover .equipment-image img {
+            transform: scale(1.05);
+        }
+
+        .equipment-content {
+            padding: 36px;
+        }
+
+        .equipment-title {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-color);
+        }
+
+        .equipment-description {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .equipment-specs {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .spec-badge {
+            background: var(--gradient-light);
+            color: var(--primary-color);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 24px;
+        }
+
+        .carousel-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: white;
+            border: none;
+            box-shadow: var(--shadow-medium);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .carousel-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Quality Section */
+        .quality {
+            background: linear-gradient(135deg, #f5f9ff 0%, #ffffff 100%);
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-bottom: 80px;
+        }
+
+        .certification-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow-light);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .certification-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .certification-icon {
+            font-size: 64px;
+            color: var(--primary-color);
+            margin-bottom: 24px;
+        }
+
+        .certification-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-color);
+        }
+
+        .certification-description {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--secondary-color);
+        }
+
+        .quality-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .quality-feature {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 32px;
+            box-shadow: var(--shadow-light);
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            transition: var(--transition);
+        }
+
+        .quality-feature:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .quality-icon {
+            font-size: 48px;
+            color: var(--primary-color);
+        }
+
+        .quality-content h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+
+        .quality-content p {
+            font-size: 18px;
+            color: var(--secondary-color);
+            line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, #ffffff 0%, #f5f9ff 100%);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow-light);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            font-size: 72px;
+            color: var(--primary-color);
+            opacity: 0.2;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            font-size: 20px;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin-bottom: 24px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 8px;
+        }
+
+        .testimonial-company {
+            font-size: 18px;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Process Section */
+        .process {
+            background: linear-gradient(135deg, #f5f9ff 0%, #ffffff 100%);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .process-step {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 36px;
+            box-shadow: var(--shadow-light);
+            text-align: center;
+            position: relative;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .process-step:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .step-number {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .step-icon {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: var(--shadow-medium);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 20px;
+        }
+
+        .step-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-color);
+        }
+
+        .step-description {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--secondary-color);
+            margin-bottom: 24px;
+        }
+
+        .step-timeline {
+            position: relative;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient-light);
+            margin: 20px 0;
+        }
+
+        .step-duration {
+            font-size: 16px;
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .step-image {
+            width: 100%;
+            height: 140px;
+            background-color: #f5f9ff;
+            border-radius: 8px;
+            margin-top: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .step-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 8s ease;
+        }
+
+        .process-step:hover .step-image img {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--gradient-primary);
+            padding: 120px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop') no-repeat center center;
+            background-size: cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            color: white;
+        }
+
+        .contact-description {
+            font-size: 22px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 900px;
+            margin: 0 auto 48px;
+        }
+
+        .contact-stats {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin: 60px 0;
+        }
+
+        .contact-stat {
+            text-align: center;
+        }
+
+        .contact-stat-number {
+            font-size: 42px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .contact-stat-label {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .contact-button {
+            background: white;
+            color: var(--primary-color);
+            border: none;
+            padding: 20px 40px;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .contact-button:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .contact-button.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .contact-button.secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #0066CC 0%, #00ADEF 100%);
+            padding: 60px;
+            color: white;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-section h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(4px);
+        }
+
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 24px;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            box-shadow: var(--shadow-heavy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-features {
+                gap: 60px;
+            }
+
+            .capabilities-grid,
+            .quality-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .products-grid,
+            .industries-grid,
+            .testimonials-grid,
+            .certifications-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-stats {
+                gap: 60px;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 24px;
+                padding: 24px;
+            }
+
+            .hero-title {
+                font-size: 56px;
+            }
+
+            .hero-subtitle {
+                font-size: 22px;
+            }
+
+            .hero-features {
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .products-grid,
+            .industries-grid,
+            .testimonials-grid,
+            .certifications-grid,
+            .process-grid,
+            .quality-features {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-stats {
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster-container">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">Custom Fasteners</div>
+            <div class="nav-links">
+                <a href="#capabilities">Capabilities</a>
+                <a href="#products">Products</a>
+                <a href="#industries">Industries</a>
+                <a href="#equipment">Equipment</a>
+                <a href="#quality">Quality</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#process">Process</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <a href="#contact" class="quote-btn">Get Quote</a>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Precision Custom Fasteners Manufacturing</h1>
+                <p class="hero-subtitle">Industry Leader Since 1994 | China's Premier Custom Fasteners Manufacturer</p>
+
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <span class="feature-number">30+</span>
+                        <span class="feature-label">Years Experience</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-number">100+</span>
+                        <span class="feature-label">Countries Served</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-number">±0.03</span>
+                        <span class="feature-label">MM Precision</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-number">0</span>
+                        <span class="feature-label">PPM Goal</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#process" class="cta-button">Upload Your Drawing</a>
+                    <a href="#products" class="cta-button cta-button-outline">Explore Products</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capabilities Section -->
+        <section class="section capabilities" id="capabilities">
+            <h2 class="section-title">Our Core Capabilities</h2>
+            <p class="section-subtitle">Advanced manufacturing capabilities with state-of-the-art equipment and precision engineering</p>
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <i class="material-icons capability-icon">precision_manufacturing</i>
+                    <div class="capability-content">
+                        <h3 class="capability-title">5-Axis Precision CNC Machining</h3>
+                        <p class="capability-description">State-of-the-art 5-axis precision turning centers with ±0.03mm tolerance for complex geometries and multi-axis manufacturing capabilities.</p>
+                    </div>
+                </div>
+                <div class="capability-card">
+                    <i class="material-icons capability-icon">construction</i>
+                    <div class="capability-content">
+                        <h3 class="capability-title">Multi-Stage Cold Forging</h3>
+                        <p class="capability-description">Advanced multi-stage cold forging presses for complex geometries and high-volume production with superior material properties.</p>
+                    </div>
+                </div>
+                <div class="capability-card">
+                    <i class="material-icons capability-icon">science</i>
+                    <div class="capability-content">
+                        <h3 class="capability-title">Material Analysis & Testing</h3>
+                        <p class="capability-description">Advanced spectrometer testing and material analysis systems for comprehensive quality verification and multi-material compatibility.</p>
+                    </div>
+                </div>
+                <div class="capability-card">
+                    <i class="material-icons capability-icon">auto_fix_high</i>
+                    <div class="capability-content">
+                        <h3 class="capability-title">Automated Surface Treatment</h3>
+                        <p class="capability-description">Fully automated coating and treatment lines for consistent surface finishes, corrosion resistance, and enhanced durability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section class="section featured-products" id="products">
+            <h2 class="section-title">Featured Products</h2>
+            <p class="section-subtitle">Representative custom fasteners for various industrial applications with precision engineering</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-badge">Automotive</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1617854811658-30b881cc7345?w=800&h=600&fit=crop" alt="EV Battery Housing Bolts">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">EV Battery Housing Bolts</h3>
+                        <p class="product-description">High-strength corrosion-resistant fasteners for electric vehicle battery modules and powertrain components with superior thermal management.</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">High-Strength</span>
+                            <span class="spec-tag">Corrosion-Resistant</span>
+                            <span class="spec-tag">Thermal Stable</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="product-btn product-btn-outline">Details</a>
+                            <a href="#" class="product-btn product-btn-primary">Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">Robotics</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1677442135722-2f658d0a3ee2?w=800&h=600&fit=crop" alt="Robotics Joint Fasteners">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Robotics Joint Fasteners</h3>
+                        <p class="product-description">Precision-machined components for robotic arm assemblies, automation systems, and high-precision mechanical joints.</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">Precision</span>
+                            <span class="spec-tag">High-Tolerance</span>
+                            <span class="spec-tag">Durable</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="product-btn product-btn-outline">Details</a>
+                            <a href="#" class="product-btn product-btn-primary">Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">Data Infrastructure</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-7e54c16976e7?w=800&h=600&fit=crop" alt="Server Rack Mounts">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Server Infrastructure Mounts</h3>
+                        <p class="product-description">Custom mounting solutions for data center servers, networking equipment, and high-density computing infrastructure.</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">Heavy-Duty</span>
+                            <span class="spec-tag">Custom Fit</span>
+                            <span class="spec-tag">Thermal</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="product-btn product-btn-outline">Details</a>
+                            <a href="#" class="product-btn product-btn-primary">Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">Industrial</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop" alt="Heavy Equipment Bolts">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Heavy Equipment Bolts</h3>
+                        <p class="product-description">Industrial-grade fasteners for heavy machinery, construction equipment, and demanding load-bearing applications.</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">Load-Bearing</span>
+                            <span class="spec-tag">Industrial-Grade</span>
+                            <span class="spec-tag">Durable</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="product-btn product-btn-outline">Details</a>
+                            <a href="#" class="product-btn product-btn-primary">Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">Transportation</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1599424661006-2369db4d9b1b?w=800&h=600&fit=crop" alt="Commercial Vehicle Components">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Commercial Vehicle Components</h3>
+                        <p class="product-description">Specialized fasteners for commercial vehicles, transportation systems, and automotive structural applications.</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">Automotive</span>
+                            <span class="spec-tag">Structural</span>
+                            <span class="spec-tag">Certified</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="product-btn product-btn-outline">Details</a>
+                            <a href="#" class="product-btn product-btn-primary">Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">Manufacturing</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop" alt="Machinery Assembly Parts">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Machinery Assembly Parts</h3>
+                        <p class="product-description">Custom components for industrial machinery, manufacturing equipment, and precision assembly applications.</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">Precision</span>
+                            <span class="spec-tag">Custom</span>
+                            <span class="spec-tag">Optimized</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="product-btn product-btn-outline">Details</a>
+                            <a href="#" class="product-btn product-btn-primary">Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries Section -->
+        <section class="section industries" id="industries">
+            <h2 class="section-title">Solutions for Key Industries</h2>
+            <p class="section-subtitle">Tailored fastening solutions for next-gen sectors — from EV powertrains to data centre servers</p>
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <img src="https://images.unsplash.com/photo-1550989460-39adf0519eb6?w=800&h=600&fit=crop" alt="Electric Vehicles" class="industry-image">
+                        <div class="industry-overlay">
+                            <i class="material-icons industry-icon">electric_car</i>
+                        </div>
+                    </div>
+                    <div class="industry-content">
+                        <h3 class="industry-name">Electric Vehicles</h3>
+                        <p class="industry-description">Battery systems, powertrain components, and EV infrastructure solutions with precision engineering.</p>
+                        <div class="industry-solutions">
+                            <span class="solution-tag">Battery Systems</span>
+                            <span class="solution-tag">Powertrain</span>
+                            <span class="solution-tag">Charging</span>
+                        </div>
+                        <a href="#" class="industry-link">Learn More <i class="material-icons">arrow_forward</i></a>
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <img src="https://images.unsplash.com/photo-1677442135722-2f658d0a3ee2?w=800&h=600&fit=crop" alt="Robotics" class="industry-image">
+                        <div class="industry-overlay">
+                            <i class="material-icons industry-icon">smart_toy</i>
+                        </div>
+                    </div>
+                    <div class="industry-content">
+                        <h3 class="industry-name">Robotics & Automation</h3>
+                        <p class="industry-description">Precision joints, assembly components, and automation systems for advanced robotics applications.</p>
+                        <div class="industry-solutions">
+                            <span class="solution-tag">Precision Joints</span>
+                            <span class="solution-tag">Assembly</span>
+                            <span class="solution-tag">Automation</span>
+                        </div>
+                        <a href="#" class="industry-link">Learn More <i class="material-icons">arrow_forward</i></a>
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <img src="https://images.unsplash.com/photo-1558494949-7e54c16976e7?w=800&h=600&fit=crop" alt="Data Centers" class="industry-image">
+                        <div class="industry-overlay">
+                            <i class="material-icons industry-icon">dns</i>
+                        </div>
+                    </div>
+                    <div class="industry-content">
+                        <h3 class="industry-name">Data Center Infrastructure</h3>
+                        <p class="industry-description">Custom mounting solutions for data center servers, networking equipment, and computing infrastructure.</p>
+                        <div class="industry-solutions">
+                            <span class="solution-tag">Server Racks</span>
+                            <span class="solution-tag">Networking</span>
+                            <span class="solution-tag">Infrastructure</span>
+                        </div>
+                        <a href="#" class="industry-link">Learn More <i class="material-icons">arrow_forward</i></a>
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop" alt="Heavy Machinery" class="industry-image">
+                        <div class="industry-overlay">
+                            <i class="material-icons industry-icon">construction</i>
+                        </div>
+                    </div>
+                    <div class="industry-content">
+                        <h3 class="industry-name">Heavy Machinery</h3>
+                        <p class="industry-description">Industrial-grade fasteners for heavy machinery, construction equipment, and demanding applications.</p>
+                        <div class="industry-solutions">
+                            <span class="solution-tag">Construction</span>
+                            <span class="solution-tag">Heavy-Duty</span>
+                            <span class="solution-tag">Machinery</span>
+                        </div>
+                        <a href="#" class="industry-link">Learn More <i class="material-icons">arrow_forward</i></a>
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop" alt="Transportation" class="industry-image">
+                        <div class="industry-overlay">
+                            <i class="material-icons industry-icon">directions_bus</i>
+                        </div>
+                    </div>
+                    <div class="industry-content">
+                        <h3 class="industry-name">Transportation</h3>
+                        <p class="industry-description">Specialized fasteners for commercial vehicles, transportation systems, and logistics infrastructure.</p>
+                        <div class="industry-solutions">
+                            <span class="solution-tag">Commercial</span>
+                            <span class="solution-tag">Logistics</span>
+                            <span class="solution-tag">Transport</span>
+                        </div>
+                        <a href="#" class="industry-link">Learn More <i class="material-icons">arrow_forward</i></a>
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop" alt="Manufacturing" class="industry-image">
+                        <div class="industry-overlay">
+                            <i class="material-icons industry-icon">factory</i>
+                        </div>
+                    </div>
+                    <div class="industry-content">
+                        <h3 class="industry-name">Manufacturing Equipment</h3>
+                        <p class="industry-description">Custom components for industrial machinery, manufacturing equipment, and precision assembly lines.</p>
+                        <div class="industry-solutions">
+                            <span class="solution-tag">Industrial</span>
+                            <span class="solution-tag">Equipment</span>
+                            <span class="solution-tag">Assembly</span>
+                        </div>
+                        <a href="#" class="industry-link">Learn More <i class="material-icons">arrow_forward</i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipment Section -->
+        <section class="section equipment" id="equipment">
+            <h2 class="section-title">State-of-the-Art Equipment & Technology</h2>
+            <p class="section-subtitle">Our advanced CNC machines, spectrum analysers and testing equipment deliver precision, consistency and innovation</p>
+
+            <div class="equipment-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="equipment-card">
+                            <div class="equipment-image">
+                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop" alt="5-Axis CNC Machining Center">
+                            </div>
+                            <div class="equipment-content">
+                                <h3 class="equipment-title">5-Axis CNC Machining Center</h3>
+                                <p class="equipment-description">State-of-the-art 5-axis CNC machining center for precision manufacturing with ±0.03mm tolerance.</p>
+                                <div class="equipment-specs">
+                                    <span class="spec-badge">±0.03mm Tolerance</span>
+                                    <span class="spec-badge">5-Axis</span>
+                                    <span class="spec-badge">High-Speed</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="equipment-card">
+                            <div class="equipment-image">
+                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop" alt="Precision CNC Manufacturing">
+                            </div>
+                            <div class="equipment-content">
+                                <h3 class="equipment-title">Precision CNC Manufacturing</h3>
+                                <p class="equipment-description">High-precision CNC machining of custom fastener components with automated quality control systems.</p>
+                                <div class="equipment-specs">
+                                    <span class="spec-badge">Automated</span>
+                                    <span class="spec-badge">Quality Control</span>
+                                    <span class="spec-badge">High Volume</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="equipment-card">
+                            <div class="equipment-image">
+                                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop" alt="Modern Manufacturing Facility">
+                            </div>
+                            <div class="equipment-content">
+                                <h3 class="equipment-title">Modern Manufacturing Facility</h3>
+                                <p class="equipment-description">State-of-the-art manufacturing facility with automated production lines and advanced robotics.</p>
+                                <div class="equipment-specs">
+                                    <span class="spec-badge">Automated</span>
+                                    <span class="spec-badge">Robotics</span>
+                                    <span class="spec-badge">Advanced</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="equipment-card">
+                            <div class="equipment-image">
+                                <img src="https://images.unsplash.com/photo-1565034949-7e54c16976e7?w=800&h=600&fit=crop" alt="Quality Control Laboratory">
+                            </div>
+                            <div class="equipment-content">
+                                <h3 class="equipment-title">Quality Control Laboratory</h3>
+                                <p class="equipment-description">Advanced quality control laboratory with precision testing equipment and comprehensive material analysis.</p>
+                                <div class="equipment-specs">
+                                    <span class="spec-badge">Spectrometer</span>
+                                    <span class="spec-badge">Testing</span>
+                                    <span class="spec-badge">Analysis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="prevBtn">
+                        <i class="material-icons">chevron_left</i>
+                    </button>
+                    <button class="carousel-btn" id="nextBtn">
+                        <i class="material-icons">chevron_right</i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Section -->
+        <section class="section quality" id="quality">
+            <h2 class="section-title">Certifications & Quality Assurance</h2>
+            <p class="section-subtitle">Committed to international manufacturing standards with full certification support</p>
+
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <i class="material-icons certification-icon">verified</i>
+                    <h3 class="certification-title">ISO 9001:2015</h3>
+                    <p class="certification-description">Quality Management Systems certification ensuring consistent quality and customer satisfaction across all processes.</p>
+                </div>
+                <div class="certification-card">
+                    <i class="material-icons certification-icon">verified</i>
+                    <h3 class="certification-title">IATF 16949:2016</h3>
+                    <p class="certification-description">Automotive Quality Management certification for the automotive industry supply chain requirements.</p>
+                </div>
+                <div class="certification-card">
+                    <i class="material-icons certification-icon">verified</i>
+                    <h3 class="certification-title">Export License</h3>
+                    <p class="certification-description">Global Trade Compliance certification for international export and distribution.</p>
+                </div>
+            </div>
+
+            <div class="quality-features">
+                <div class="quality-feature">
+                    <i class="material-icons quality-icon">analytics</i>
+                    <div class="quality-content">
+                        <h3>Advanced Material Analysis</h3>
+                        <p>Comprehensive material testing and spectrometer analysis for multi-material compatibility verification.</p>
+                    </div>
+                </div>
+                <div class="quality-feature">
+                    <i class="material-icons quality-icon">verified_user</i>
+                    <div class="quality-content">
+                        <h3>Zero Defect Goal</h3>
+                        <p>Relentless pursuit of 0 PPM quality target through advanced quality control systems.</p>
+                    </div>
+                </div>
+                <div class="quality-feature">
+                    <i class="material-icons quality-icon">auto_fix_high</i>
+                    <div class="quality-content">
+                        <h3>Continuous Improvement</h3>
+                        <p>Ongoing process optimization and technology upgrades for enhanced precision and efficiency.</p>
+                    </div>
+                </div>
+                <div class="quality-feature">
+                    <i class="material-icons quality-icon">public</i>
+                    <div class="quality-content">
+                        <h3>Global Standards</h3>
+                        <p>Compliance with international manufacturing standards and regulatory requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section testimonials" id="testimonials">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">Hear from global clients about our service, quality and delivery</p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Exceptional precision and reliability. Their custom fasteners have become critical components in our battery systems. The quality and consistency exceed industry standards."</p>
+                    <p class="testimonial-author">Leading EV Manufacturer</p>
+                    <p class="testimonial-company">Germany</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The quality and consistency of their precision-machined components exceed our expectations every time. Their engineering team provides excellent technical support."</p>
+                    <p class="testimonial-author">Robotics Innovator</p>
+                    <p class="testimonial-company">Japan</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Reliable partner for our custom mounting solutions. Fast delivery and outstanding quality control make them our preferred supplier."</p>
+                    <p class="testimonial-author">Data Center Solutions</p>
+                    <p class="testimonial-company">USA</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="section process" id="process">
+            <h2 class="section-title">Our Custom Process in 4 Steps</h2>
+            <p class="section-subtitle">From concept to delivery, we ensure precision at every stage</p>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="material-icons">upload_file</i>
+                    </div>
+                    <h3 class="step-title">Submit Your Drawing</h3>
+                    <p class="step-description">Upload your technical specifications, requirements, and design drawings for initial analysis.</p>
+                    <div class="step-timeline"></div>
+                    <div class="step-duration">Required: Design files, specifications</div>
+                    <div class="step-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop" alt="Submit Drawing">
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="material-icons">engineering</i>
+                    </div>
+                    <h3 class="step-title">Engineering Review</h3>
+                    <p class="step-description">Our expert engineers analyze and optimize your design for manufacturability and performance.</p>
+                    <div class="step-timeline"></div>
+                    <div class="step-duration">Timeline: 1-3 business days</div>
+                    <div class="step-image">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop" alt="Engineering Review">
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="material-icons">check_circle</i>
+                    </div>
+                    <h3 class="step-title">Prototype & Approval</h3>
+                    <p class="step-description">Sample production and comprehensive quality verification before full-scale manufacturing.</p>
+                    <div class="step-timeline"></div>
+                    <div class="step-duration">Timeline: 5-10 business days</div>
+                    <div class="step-image">
+                        <img src="https://images.unsplash.com/photo-1565034949-7e54c16976e7?w=800&h=600&fit=crop" alt="Prototype & Approval">
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="material-icons">inventory</i>
+                    </div>
+                    <h3 class="step-title">Mass Production & Shipping</h3>
+                    <p class="step-description">Full-scale production with global delivery and comprehensive export documentation.</p>
+                    <div class="step-timeline"></div>
+                    <div class="step-duration">Timeline: Based on order volume</div>
+                    <div class="step-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop" alt="Mass Production">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="contact-content">
+                <h2 class="contact-title">Let's Build Your Custom Fasteners Project Together</h2>
+                <p class="contact-description">Join 100+ global companies who trust us for precision custom fasteners and exceptional service</p>
+
+                <div class="contact-stats">
+                    <div class="contact-stat">
+                        <div class="contact-stat-number">500+</div>
+                        <div class="contact-stat-label">Global Clients</div>
+                    </div>
+                    <div class="contact-stat">
+                        <div class="contact-stat-number">30+</div>
+                        <div class="contact-stat-label">Years Experience</div>
+                    </div>
+                    <div class="contact-stat">
+                        <div class="contact-stat-number">100+</div>
+                        <div class="contact-stat-label">Countries Served</div>
+                    </div>
+                </div>
+
+                <div class="contact-buttons">
+                    <a href="#" class="contact-button">
+                        <i class="material-icons">upload_file</i>
+                        Submit Your Drawing
+                    </a>
+                    <a href="#" class="contact-button secondary">
+                        <i class="material-icons">download</i>
+                        Download Brochure
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <div class="footer-links">
+                        <a href="#about">Company Overview</a>
+                        <a href="#process">Our Process</a>
+                        <a href="#quality">Quality Standards</a>
+                        <a href="#testimonials">Client Stories</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <div class="footer-links">
+                        <a href="#products">Featured Products</a>
+                        <a href="#industries">Industry Solutions</a>
+                        <a href="#equipment">Technology</a>
+                        <a href="#contact">Custom Projects</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="material-icons">phone</i>
+                            <span>+86 123 4567 8900</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="material-icons">email</i>
+                            <span>info@customfasteners.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="material-icons">location_on</i>
+                            <span>Shanghai, China</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Certifications</h3>
+                    <div class="footer-links">
+                        <a href="#quality">ISO 9001:2015</a>
+                        <a href="#quality">IATF 16949:2016</a>
+                        <a href="#quality">Export License</a>
+                        <a href="#quality">Quality Systems</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2025 Custom Fasteners. All rights reserved.
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="material-icons">language</i></a>
+                    <a href="#"><i class="material-icons">email</i></a>
+                    <a href="#"><i class="material-icons">phone</i></a>
+                    <a href="#"><i class="material-icons">share</i></a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <button class="back-to-top" id="backToTop">
+            <i class="material-icons">keyboard_arrow_up</i>
+        </button>
+    </div>
+
+    <script>
+        // Equipment Carousel
+        const carouselTrack = document.querySelector('.carousel-track');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentPosition = 0;
+        const cardWidth = 468; // card width + margin
+
+        const moveCarousel = (direction) => {
+            const maxPosition = -(carouselTrack.children.length - 3) * cardWidth;
+
+            if (direction === 'next') {
+                currentPosition = Math.max(currentPosition - cardWidth, maxPosition);
+            } else {
+                currentPosition = Math.min(currentPosition + cardWidth, 0);
+            }
+
+            carouselTrack.style.transform = `translateX(${currentPosition}px)`;
+        };
+
+        prevBtn.addEventListener('click', () => moveCarousel('prev'));
+        nextBtn.addEventListener('click', () => moveCarousel('next'));
+
+        // Auto-scroll for equipment carousel
+        let autoScrollInterval = setInterval(() => {
+            if (currentPosition <= -(carouselTrack.children.length - 3) * cardWidth) {
+                currentPosition = 0;
+            } else {
+                currentPosition -= cardWidth;
+            }
+            carouselTrack.style.transform = `translateX(${currentPosition}px)`;
+        }, 4000);
+
+        // Pause auto-scroll on hover
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoScrollInterval);
+        });
+
+        carouselContainer.addEventListener('mouseleave', () => {
+            autoScrollInterval = setInterval(() => {
+                if (currentPosition <= -(carouselTrack.children.length - 3) * cardWidth) {
+                    currentPosition = 0;
+                } else {
+                    currentPosition -= cardWidth;
+                }
+                carouselTrack.style.transform = `translateX(${currentPosition}px)`;
+            }, 4000);
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(section);
+        });
+
+        // Counter Animation for stats
+        const animateCounter = (element) => {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    element.textContent = Math.ceil(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            };
+
+            updateCounter();
+        };
+
+        // Observe hero stats for animation
+        const heroStats = document.querySelector('.hero-features');
+        if (heroStats) {
+            const statNumbers = heroStats.querySelectorAll('.feature-number');
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        statNumbers.forEach(stat => {
+                            if (stat.getAttribute('data-target')) {
+                                animateCounter(stat);
+                            }
+                        });
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            statsObserver.observe(heroStats);
+        }
+
+        // Add data-target attributes to stat numbers
+        document.addEventListener('DOMContentLoaded', () => {
+            const statNumbers = document.querySelectorAll('.feature-number');
+            statNumbers.forEach(stat => {
+                if (!stat.getAttribute('data-target')) {
+                    const text = stat.textContent;
+                    if (text.includes('+')) {
+                        stat.setAttribute('data-target', text.replace('+', ''));
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
